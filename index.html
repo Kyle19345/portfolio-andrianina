@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Webscraping & Data</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header id="top">
+    <div class="logo">Prénom Nom</div>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-intro">Extraction et structuration de données web</p>
+
+      <h1 class="hero-title">
+        Je transforme le web brut en données exploitables.
+      </h1>
+
+      <p class="hero-subtitle">
+        Je conçois des scripts de scraping fiables et des pipelines d'automatisation
+        pour transformer n'importe quelle page web en données propres,
+        structurées et prêtes à l'emploi.
+      </p>
+
+      <a href="#projets" class="hero-cta">Voir mes projets</a>
+    </div>
+
+    <div class="photo-frame">
+      <img src="assets/hero-photo.jpg" alt="Photo">
+      <span>Photo</span>
+    </div>
+  </section>
+
+  <section class="projects" id="projets">
+    <p class="projects-intro">Sélection de travaux</p>
+
+    <h2 class="projects-title">
+      Quelques projets d'extraction et d'automatisation de données.
+    </h2>
+
+    <div class="project-item">
+      <div class="project-name">Suivi de prix e-commerce</div>
+
+      <div>
+        <p class="project-description">
+          Script de collecte automatisée pour surveiller l'évolution des prix
+          sur plusieurs sites marchands, avec export quotidien structuré.
+        </p>
+
+        <p class="project-stack">
+          Python · BeautifulSoup · Pandas
+        </p>
+      </div>
+
+      <a href="#" class="project-link">Voir le projet</a>
+    </div>
+
+    <div class="project-item">
+      <div class="project-name">Agrégateur d'offres d'emploi</div>
+
+      <div>
+        <p class="project-description">
+          Pipeline de scraping multi-sources combinant plusieurs plateformes
+          d'offres d'emploi en une base de données unique et interrogeable.
+        </p>
+
+        <p class="project-stack">
+          Python · Scrapy · PostgreSQL
+        </p>
+      </div>
+
+      <a href="#" class="project-link">Voir le projet</a>
+    </div>
+
+    <div class="project-item">
+      <div class="project-name">Extraction de données dynamiques</div>
+
+      <div>
+        <p class="project-description">
+          Automatisation de la collecte sur des pages générées en JavaScript,
+          avec gestion des interactions et des temps de chargement.
+        </p>
+
+        <p class="project-stack">
+          Python · Selenium · Playwright
+        </p>
+      </div>
+
+      <a href="#" class="project-link">Voir le projet</a>
+    </div>
+
+    <a href="projects.html" class="hero-cta projects-all-link">
+      Voir tous les projets
+    </a>
+  </section>
+
+  <section class="about" id="a-propos">
+
+    <div class="photo-frame">
+      <img src="assets/photo.jpg" alt="Photo de profil">
+      <span>Photo</span>
+    </div>
+
+    <div>
+      <p class="about-intro">Qui je suis</p>
+
+      <h2 class="about-title">À propos</h2>
+
+      <p class="about-text">
+        Diplômé en génie industriel, électromécanique et informatique industrielle,
+        je suis développeur Python autodidacte spécialisé en web scraping, en extraction
+        de données web et en automatisation no-code. Passionné d'informatique, je conçois
+        des solutions sur mesure avec déjà plusieurs projets à mon actif.
+      </p>
+
+      <p class="about-example">
+        Exemple concret : un système de veille de prix qui vous alerte dès qu'un
+        changement est détecté.
+      </p>
+
+      <p class="about-services-label">Ce que je fais</p>
+
+      <ul class="about-services">
+        <li>Création de robots Python de web scraping sur mesure</li>
+        <li>Collecte d'annonces immobilières</li>
+        <li>Collecte de listes de produits sur sites e-commerce</li>
+        <li>Nettoyage et standardisation des données</li>
+        <li>Automatisation de l'envoi d'e-mails</li>
+        <li>Automatisation de séquences de nurturing</li>
+        <li>Automatisation de tâches chronophages</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="stack" id="stack">
+
+    <p class="stack-intro">Comment je travaille</p>
+
+    <h2 class="stack-title">Stack technique</h2>
+
+    <div class="stack-row">
+      <div class="stack-label">Langages & frameworks</div>
+      <div class="stack-items">Python, Flask</div>
+    </div>
+
+    <div class="stack-row">
+      <div class="stack-label">Extraction de données</div>
+      <div class="stack-items">
+        BeautifulSoup, Playwright, Requests, Scrapy
+      </div>
+    </div>
+
+    <div class="stack-row">
+      <div class="stack-label">Automatisation no-code</div>
+      <div class="stack-items">n8n, Make, Zapier</div>
+    </div>
+
+    <div class="stack-row">
+      <div class="stack-label">Données & infrastructure</div>
+      <div class="stack-items">PostgreSQL, Supabase, Docker</div>
+    </div>
+
+    <div class="stack-row">
+      <div class="stack-label">Outils</div>
+      <div class="stack-items">Git & GitHub</div>
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <p class="contact-intro">Discutons de votre projet</p>
+
+    <h2 class="contact-title">
+      Un projet de collecte ou d'automatisation de données ?
+    </h2>
+
+    <p class="contact-subtitle">
+      Écrivez-moi directement ou passez par le formulaire ci-dessous —
+      je réponds sous 48h.
+    </p>
+
+    <div class="contact-body">
+
+      <div class="contact-info">
+
+        <p class="contact-info-label">Coordonnées</p>
+
+        <ul class="contact-info-list">
+
+          <li>
+            <span>Email</span>
+            <a href="mailto:contact@exemple.com">
+              contact@exemple.com
+            </a>
+          </li>
+
+          <li>
+            <span>LinkedIn</span>
+            <a href="https://linkedin.com/in/votre-profil"
+               target="_blank"
+               rel="noopener">
+              linkedin.com/in/votre-profil
+            </a>
+          </li>
+
+          <li>
+            <span>GitHub</span>
+            <a href="https://github.com/votre-profil"
+               target="_blank"
+               rel="noopener">
+              github.com/votre-profil
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="contact-form-wrapper">
+
+        <p class="contact-form-label">Envoyer un message</p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+          method="POST"
+        >
+
+          <div class="field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Envoyer le message</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+
+    <div class="footer-links">
+      <a href="mailto:contact@exemple.com">Email</a>
+
+      <a href="https://linkedin.com/in/votre-profil"
+         target="_blank"
+         rel="noopener">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/votre-profil"
+         target="_blank"
+         rel="noopener">
+        GitHub
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Prénom Nom</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>

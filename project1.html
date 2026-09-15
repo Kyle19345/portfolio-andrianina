@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suivi de prix e-commerce — Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap"
+  rel="stylesheet"
+>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/project.css">
+</head>
+
+<body>
+
+  <header id="top">
+
+    <div class="logo">Prénom Nom</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+
+        <li>
+          <a href="projects.html" class="active">
+            Projets
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#a-propos">
+            À propos
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <a href="projects.html" class="back-link">
+    ← Tous les projets
+  </a>
+
+  <section class="project-hero">
+
+    <div class="project-tags">
+      <span>Web scraping</span>
+      <span>E-commerce</span>
+    </div>
+
+    <h1>Suivi de prix e-commerce</h1>
+
+    <p class="project-hero-summary">
+      Un système de veille qui surveille automatiquement l'évolution des prix
+      sur plusieurs sites marchands, et alerte dès qu'un changement est détecté.
+    </p>
+
+  </section>
+
+  <div class="photo-frame project-main-photo">
+    <img
+      src="assets/projet-1-large.jpg"
+      alt="Capture d'écran du projet Suivi de prix e-commerce"
+    >
+    <span>Capture d'écran</span>
+  </div>
+
+  <div class="project-content">
+
+    <div class="content-block">
+
+      <p class="content-label">Le contexte</p>
+
+      <h2>
+        Un problème simple, mais chronophage à surveiller à la main
+      </h2>
+
+      <p>
+        Un client suivait manuellement les prix de plusieurs concurrents sur
+        différentes boutiques en ligne, plusieurs fois par semaine. Un processus
+        long, source d'erreurs, et impossible à faire évoluer sans y passer
+        encore plus de temps.
+      </p>
+
+      <p>
+        L'objectif : automatiser entièrement cette veille pour être alerté en
+        temps réel dès qu'un prix change, sans intervention manuelle.
+      </p>
+
+    </div>
+
+    <div class="content-block">
+
+      <p class="content-label">L'approche</p>
+
+      <h2>
+        Un robot de collecte fiable, exécuté à intervalles réguliers
+      </h2>
+
+      <p>
+        J'ai développé un script Python qui parcourt automatiquement les pages
+        produits ciblées, extrait les prix avec BeautifulSoup, puis les
+        structure avec Pandas pour un export propre et exploitable.
+      </p>
+
+      <p>
+        Le script est exécuté à intervalles réguliers et compare chaque nouvelle
+        collecte à la précédente pour détecter les variations. Une attention
+        particulière a été portée à la robustesse : gestion des erreurs, des
+        pages indisponibles et des changements de structure HTML.
+      </p>
+
+    </div>
+
+    <div class="content-block">
+
+      <p class="content-label">Le résultat</p>
+
+      <h2>
+        Une veille 100% automatisée, sans surveillance manuelle
+      </h2>
+
+      <p>
+        Le client reçoit désormais une alerte automatique dès qu'un changement
+        de prix est détecté, avec un historique structuré consultable à tout
+        moment. Un gain de temps considérable et une réactivité impossible à
+        obtenir manuellement.
+      </p>
+
+    </div>
+
+    <div class="content-block">
+
+      <p class="content-label">Stack technique</p>
+
+      <div class="project-stack-list">
+        <span>Python</span>
+        <span>BeautifulSoup</span>
+        <span>Pandas</span>
+        <span>Requests</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="project-links">
+
+    <a href="#" class="btn-primary">
+      Voir le code sur GitHub
+    </a>
+
+    <a href="index.html#contact" class="btn-secondary">
+      Un besoin similaire ?
+    </a>
+
+  </div>
+
+  <footer class="footer">
+
+    <div class="footer-links">
+
+      <a href="mailto:contact@exemple.com">
+        Email
+      </a>
+
+      <a
+        href="https://linkedin.com/in/votre-profil"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/votre-profil"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Prénom Nom</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>
