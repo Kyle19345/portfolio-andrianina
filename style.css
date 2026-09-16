@@ -1,4 +1,41 @@
-/* ---------- HEADER ---------- */
+:root {
+  /* 60% — fond dominant */
+  --beige: #F1EBDF;
+  --beige-line: #D9CCAE;
+
+  /* 30% — structure / texte fort */
+  --black: #161513;
+  --charcoal: #5C564A;
+
+  /* 10% — accent */
+  --gold: #B8862E;
+  --gold-dark: #93691F;
+
+  --white: #FBF9F5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- HEADER (bloc noir — 30%) ---------- */
 
 header {
   background-color: var(--black);
@@ -28,12 +65,12 @@ nav a {
   color: var(--beige-line);
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: var(--gold);
 }
 
-
-/* ---------- HERO ---------- */
+/* ---------- HERO (page d'accueil) ---------- */
 
 .hero {
   display: grid;
@@ -82,13 +119,14 @@ nav a:hover {
   background-color: var(--gold-dark);
 }
 
+/* ---------- CADRE PHOTO (partagé) ---------- */
+
 .photo-frame {
   position: relative;
   aspect-ratio: 4 / 5;
   border: 1px solid var(--black);
   background-color: var(--white);
-  background-image:
-    radial-gradient(var(--beige-line) 1px, transparent 1px);
+  background-image: radial-gradient(var(--beige-line) 1px, transparent 1px);
   background-size: 14px 14px;
   display: flex;
   align-items: center;
@@ -132,8 +170,7 @@ nav a:hover {
   max-width: 380px;
 }
 
-
-/* ---------- PROJETS ---------- */
+/* ---------- PROJETS (aperçu sur la home) ---------- */
 
 .projects {
   padding: 120px 100px;
@@ -204,11 +241,6 @@ nav a:hover {
   color: var(--black);
   border-color: var(--black);
 }
-
-.projects-all-link {
-  margin-top: 48px;
-}
-
 
 /* ---------- À PROPOS ---------- */
 
@@ -287,7 +319,6 @@ nav a:hover {
   border-bottom: 1px solid var(--beige-line);
 }
 
-
 /* ---------- STACK TECHNIQUE ---------- */
 
 .stack {
@@ -336,8 +367,7 @@ nav a:hover {
   color: var(--charcoal);
 }
 
-
-/* ---------- CONTACT ---------- */
+/* ---------- CONTACT (bloc noir — 30%) ---------- */
 
 .contact {
   background-color: var(--black);
@@ -462,8 +492,153 @@ nav a:hover {
   background-color: var(--white);
 }
 
+/* ---------- FIL D'ARIANE (pages de détail projet) ---------- */
 
-/* ---------- FOOTER ---------- */
+.back-link {
+  display: inline-block;
+  padding: 40px 100px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.back-link:hover {
+  color: var(--gold-dark);
+}
+
+/* ---------- HERO PROJET (page de détail) ---------- */
+
+.project-hero {
+  padding: 32px 100px 60px;
+  max-width: 760px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-tags span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  border: 1px solid var(--beige-line);
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+.project-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.project-hero-summary {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+
+.project-main-photo {
+  aspect-ratio: 16 / 8;
+  margin: 0 100px 100px;
+}
+
+/* ---------- CONTENU (page de détail projet) ---------- */
+
+.project-content {
+  max-width: 700px;
+  padding: 0 100px;
+}
+
+.content-block {
+  margin-bottom: 72px;
+}
+
+.content-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+
+.content-block h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.content-block p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  max-width: 620px;
+}
+
+.content-block p + p {
+  margin-top: 16px;
+}
+
+.project-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-stack-list span {
+  font-size: 14px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--beige-line);
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+/* ---------- LIENS DE FIN DE PAGE (page de détail projet) ---------- */
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  padding: 0 100px 140px;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 16px 32px;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  background-color: var(--gold-dark);
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid var(--black);
+  padding: 16px 32px;
+  border-radius: 3px;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-dark);
+  color: var(--gold-dark);
+}
+
+/* ---------- FOOTER (bloc noir — 30%) ---------- */
 
 .footer {
   background-color: var(--black);
@@ -499,7 +674,6 @@ nav a:hover {
   color: var(--gold);
 }
 
-
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 768px) {
@@ -515,6 +689,8 @@ nav a:hover {
     gap: 24px;
     flex-wrap: wrap;
   }
+
+  /* Home */
 
   .hero {
     grid-template-columns: 1fr;
@@ -578,6 +754,39 @@ nav a:hover {
     grid-template-columns: 1fr;
     gap: 56px;
   }
+
+  /* Page de détail projet */
+
+  .back-link {
+    padding: 32px 24px 0;
+  }
+
+  .project-hero {
+    padding: 24px 24px 40px;
+  }
+
+  .project-hero h1 {
+    font-size: 30px;
+  }
+
+  .project-main-photo {
+    margin: 0 24px 60px;
+  }
+
+  .project-content {
+    padding: 0 24px;
+  }
+
+  .content-block {
+    margin-bottom: 48px;
+  }
+
+  .project-links {
+    padding: 0 24px 80px;
+    flex-direction: column;
+  }
+
+  /* Footer */
 
   .footer {
     padding: 40px 24px;
