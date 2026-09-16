@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suivi de prix e-commerce — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="logo">Andrianina RAMANANDRAIBE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="projects.html" class="back-link">← Tous les projets</a>
+
+  <section class="project-hero">
+    <div class="project-tags">
+      <span>Web scraping</span>
+      <span>Immobilier</span>
+      <span>Data processing</span>
+    </div>
+    <h1>Agrégateur et analyse d'offres immobilières </h1>
+    <p class="project-hero-summary">
+      Centralisation et normalisation d'annonces immobilières provenant de plusieurs sites 
+      à Madagascar afin de créer une base de données homogène et exploitable.
+    </p>
+  </section>
+
+  <!-- Remplacer par <img src="assets/projet-1-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
+  <div class="photo-frame project-main-photo has-photo">
+    <img src="assets/project2-img1.png" alt="Capture d'écran du projet Suivi de prix e-commerce">
+    <span>Capture d'écran</span>
+  </div>
+
+  <div class="project-content">
+
+    <div class="content-block">
+      <p class="content-label">Le contexte</p>
+      <h2>Des données immobilières dispersées et difficiles à comparer</h2>
+      <p>
+        Les annonces immobilières sont réparties sur plusieurs plateformes, 
+        avec des formats et des informations qui varient d'un site à l'autre.
+        Dans ce projet, l'objectif était de collecter des annonces de terrains depuis 
+        plusieurs sites immobiliers à Madagascar, puis de les regrouper 
+        dans une structure commune.
+        La principale difficulté ne résidait pas dans l'extraction elle-même, 
+        mais dans l'hétérogénéité des données : prix présents 
+        dans le titre ou la description, devises différentes,
+        superficies exprimées de manière variable et informations parfois incomplètes.
+      </p>
+      <p>
+      L'objectif : Transformer des annonces hétérogènes en données comparables
+      et de centraliser les annonces et de normaliser les informations clés, notamment le prix, la superficie et la localisation.
+      Le but était d'obtenir un dataset suffisamment propre et cohérent 
+      pour permettre ensuite l'analyse et la comparaison des différentes offres.
+    </p>
+    </div>
+
+    <div class="content-block">
+      <p class="content-label">L'approche</p>
+      <h2>Une collecte multi-sources suivie d'un important travail de normalisation</h2>
+      <p>
+        J'ai commencé par analyser chaque plateforme afin d'identifier sa structure 
+        et les spécificités de ses annonces.
+        Une stratégie d'extraction adaptée à chaque site a ensuite été mise en place 
+        avec Requests et BeautifulSoup.
+    </p>
+      <p>Une attention particulière a été portée au traitement des données :</p>
+        <ul>
+          <li>Extraction des informations pertinentes depuis chaque annonce.</li>
+          <li>Recherche et récupération du prix lorsqu'il était présent dans différents champs (titre, description).</li>
+          <li>Normalisation des devises afin d'obtenir un format homogène.</li>
+          <li>Conversion et standardisation des superficies en m².</li>
+          <li>Calcul et uniformisation des informations nécessaires à la comparaison des offres.</li>
+          <li>Suppression des doublons et filtrage des données incomplètes.</li>
+          <li>Structuration des informations dans un format commun et exploitable.</li>
+      </ul>
+    </div>
+    <div class="content-block">
+      <p class="content-label">Le résultat</p>
+      <h2>Une base immobilière centralisée et exploitable</h2>
+      <p>
+        Les annonces provenant de plusieurs sites sont désormais regroupées 
+        dans une structure unique et homogène.
+        Chaque annonce contient les principales informations 
+        disponibles : prix, superficie, localisation, images, URL et description.
+        Les données ont été nettoyées et normalisées 
+        afin de faciliter leur analyse, leur comparaison et leur réutilisation.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <p class="content-label">Stack technique</p>
+      <div class="project-stack-list">
+        <span>Python</span>
+        <span>BeautifulSoup</span>
+        <span>Pandas</span>
+        <span>Requests</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="project-links">
+    <a href="index.html#contact" class="btn-secondary">Un besoin similaire ?</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:contact@exemple.com">Email</a>
+      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Prénom Nom</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -10,9 +10,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header id="top">
-    <div class="logo">Prénom Nom</div>
+    <div class="logo">Andrianina RAMANANDRAIBE</div>
     <nav>
       <ul>
         <li><a href="#">Accueil</a></li>
@@ -36,8 +35,8 @@
     </div>
 
     <!-- Remplacer par <img src="assets/hero-photo.jpg" alt="..."> à l'intérieur, et ajouter la classe "has-photo" -->
-    <div class="photo-frame">
-      <img src="assets/hero-photo.jpg" alt="Photo">
+    <div class="photo-frame has-photo">
+      <img src="assets/img1.jpeg" alt="Photo">
       <span>Photo</span>
     </div>
   </section>
@@ -47,77 +46,83 @@
     <h2 class="projects-title">Quelques projets d'extraction et d'automatisation de données.</h2>
 
     <div class="project-item">
-      <div class="project-name">Suivi de prix e-commerce</div>
+      <div class="project-name">Extraction de données produits de sites e-commerce</div>
       <div>
         <p class="project-description">
           Script de collecte automatisée pour surveiller l'évolution des prix
           sur plusieurs sites marchands, avec export quotidien structuré.
         </p>
-        <p class="project-stack">Python · BeautifulSoup · Pandas</p>
+        <p class="project-stack">Playwright · BeautifulSoup · Pandas</p>
       </div>
       <a href="#" class="project-link">Voir le projet</a>
     </div>
 
     <div class="project-item">
-      <div class="project-name">Agrégateur d'offres d'emploi</div>
+      <div class="project-name">Agrégateur et analyse d'offres immobilières</div>
       <div>
         <p class="project-description">
           Pipeline de scraping multi-sources combinant plusieurs plateformes
           d'offres d'emploi en une base de données unique et interrogeable.
         </p>
-        <p class="project-stack">Python · Scrapy · PostgreSQL</p>
+        <p class="project-stack">BeautifulSoup · Requests · Pandas</p>
       </div>
       <a href="#" class="project-link">Voir le projet</a>
     </div>
-
     <div class="project-item">
-      <div class="project-name">Extraction de données dynamiques</div>
+      <div class="project-name">Application pour extraction d'email sur Youtube</div>
       <div>
         <p class="project-description">
           Automatisation de la collecte sur des pages générées en JavaScript,
           avec gestion des interactions et des temps de chargement.
         </p>
-        <p class="project-stack">Python · Selenium · Playwright</p>
+        <p class="project-stack">CustomTkinter · Api · Pandas</p>
       </div>
       <a href="#" class="project-link">Voir le projet</a>
     </div>
-
-    <a href="projects.html" class="hero-cta" style="margin-top: 48px; display: inline-block;">Voir tous les projets</a>
   </section>
 
   <section class="about" id="a-propos">
-
-    <!-- Remplacer par <img src="assets/photo.jpg" alt="..."> à l'intérieur, et ajouter la classe "has-photo" -->
-    <div class="photo-frame">
-      <img src="assets/photo.jpg" alt="Photo de profil">
-      <span>Photo</span>
-    </div>
-
     <div>
       <p class="about-intro">Qui je suis</p>
       <h2 class="about-title">À propos</h2>
+
       <p class="about-text">
-        Diplômé en génie industriel, électromécanique et informatique industrielle,
-        je suis développeur Python autodidacte spécialisé en web scraping, en extraction
-        de données web et en automatisation no-code. Passionné d'informatique, je conçois
-        des solutions sur mesure avec déjà plusieurs projets à mon actif.
+        Diplômé en électromécanique et informatique industrielle, je suis également
+        développeur Python autodidacte, avec un intérêt particulier pour l'extraction,
+        la structuration et l'exploitation des données.
+      </p>
+      <p class="about-text">
+        J'ai la conviction que les données sont l'or noir du XXIᵉ siècle. Encore faut-il
+        pouvoir les collecter, les structurer et les transformer en informations réellement
+        exploitables. Au fil de mes projets, j'ai travaillé sur une vingtaine de sites web
+        et extrait plus d'une centaine de milliers de données, en développant des solutions
+        adaptées aux différentes contraintes techniques rencontrées.
       </p>
 
-      <p class="about-example">
-        Exemple concret : un système de veille de prix qui vous alerte dès qu'un
-        changement est détecté.
+      <p class="about-services-label">Ma façon de travailler</p>
+      <p class="about-text">
+        Je ne cherche pas simplement à utiliser un outil ou à écrire du code. J'analyse
+        votre besoin, j'identifie les contraintes et je conçois une solution adaptée à
+        votre situation. Mon objectif est de vous fournir un système fiable, pertinent
+        et réellement utile, pensé pour répondre à un problème concret.
+      </p>
+      <p class="about-text">
+        Analyser, structurer, développer : c'est cette approche qui guide mon travail.
       </p>
 
-      <p class="about-services-label">Ce que je fais</p>
+      <p class="about-services-label">Ce que je fais réellement</p>
       <ul class="about-services">
-        <li>Création de robots Python de web scraping sur mesure</li>
-        <li>Collecte d'annonces immobilières</li>
-        <li>Collecte de listes de produits sur sites e-commerce</li>
-        <li>Nettoyage et standardisation des données</li>
-        <li>Automatisation de l'envoi d'e-mails</li>
-        <li>Automatisation de séquences de nurturing</li>
-        <li>Automatisation de tâches chronophages</li>
+        <li>J'automatise la collecte des données dont vous avez besoin sur le web.</li>
+        <li>Je mets en place des systèmes de veille automatisée pour surveiller les informations importantes pour votre activité.</li>
+        <li>Je nettoie et standardise vos données afin de les rendre facilement exploitables.</li>
+        <li>J'automatise les tâches chronophages grâce à des outils comme n8n et Make, afin de réduire les opérations répétitives et vous faire gagner du temps.</li>
+        <li>Je conçois des agents IA avec n8n pour automatiser certaines tâches et intégrer l'intelligence artificielle directement dans vos processus.</li>
       </ul>
+    </div>
+
+    <div class="photo-frame has-photo">
+      <img src="assets/img2.jpeg" alt="Photo de profil">
+      <span>Photo</span>
     </div>
   </section>
 
@@ -162,15 +167,15 @@
         <ul class="contact-info-list">
           <li>
             <span>Email</span>
-            <a href="mailto:contact@exemple.com">contact@exemple.com</a>
+            <a href="mailto:andrianinakanto5@gmail.com">andrianinakanto5@gmail.com</a>
           </li>
           <li>
             <span>LinkedIn</span>
-            <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">linkedin.com/in/votre-profil</a>
+            <a href="https://mg.linkedin.com/in/andrianina-ramanandraibe" target="_blank" rel="noopener">Andrianina RAMANANDRAIBE</a>
           </li>
           <li>
             <span>GitHub</span>
-            <a href="https://github.com/votre-profil" target="_blank" rel="noopener">github.com/votre-profil</a>
+            <a href="https://github.com/Kyle19345" target="_blank" rel="noopener">Github</a>
           </li>
         </ul>
       </div>
@@ -203,12 +208,12 @@
 
   <footer class="footer">
     <div class="footer-links">
-      <a href="mailto:contact@exemple.com">Email</a>
-      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:andrianinakanto5@gmail.com">Email</a>
+      <a href="https://mg.linkedin.com/in/andrianina-ramanandraibe" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Kyle19345" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Prénom Nom</p>
+      <p>© 2026 Andrianina RAMANANDRAIBE</p>
       <a href="#top">Retour en haut</a>
     </div>
   </footer>
