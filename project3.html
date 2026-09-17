@@ -42,8 +42,31 @@
 
   <!-- Remplacer par <img src="assets/projet-1-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
   <div class="photo-frame project-main-photo has-photo">
-    <img src="assets/project3-img1.png" alt="Capture d'écran du projet Suivi de prix e-commerce">
-    <span>Capture d'écran</span>
+
+  <div class="carousel">
+
+    <div class="carousel-track">
+      <img src="assets/project3-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
+      <img src="assets/project3-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+    </div>
+
+    <button class="carousel-btn carousel-prev" aria-label="Image précédente">
+      ←
+    </button>
+
+    <button class="carousel-btn carousel-next" aria-label="Image suivante">
+      →
+    </button>
+
+    <div class="carousel-dots">
+      <button class="carousel-dot active" aria-label="Image 1"></button>
+      <button class="carousel-dot" aria-label="Image 2"></button>
+      <button class="carousel-dot" aria-label="Image 3"></button>
+      <button class="carousel-dot" aria-label="Image 4"></button>
+    </div>
+
+    </div>
+
   </div>
 
   <div class="project-content">
@@ -130,6 +153,63 @@
       <a href="#top">Retour en haut</a>
     </div>
   </footer>
+
+    <script>
+    const images = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((image) => {
+        image.classList.remove('active');
+      });
+
+      dots.forEach((dot) => {
+        dot.classList.remove('active');
+      });
+
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+    }
+
+    function nextImage() {
+      let nextIndex = currentIndex + 1;
+
+      if (nextIndex >= images.length) {
+        nextIndex = 0;
+      }
+
+      showImage(nextIndex);
+    }
+
+    function previousImage() {
+      let previousIndex = currentIndex - 1;
+
+      if (previousIndex < 0) {
+        previousIndex = images.length - 1;
+      }
+
+      showImage(previousIndex);
+    }
+
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', previousImage);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showImage(index);
+      });
+    });
+
+    // Changement automatique toutes les 5 secondes
+    setInterval(nextImage, 5000);
+  </script>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 :root {
   /* 60% — fond dominant */
   --beige: #F1EBDF;
@@ -9,7 +10,7 @@
 
   /* 10% — accent */
   --gold: #B8862E;
-  --gold-dark: #93691F;
+  --gold-dark: #8A5F1E;
 
   --white: #FBF9F5;
 }
@@ -20,7 +21,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -35,7 +37,10 @@ a {
   text-decoration: none;
 }
 
-/* ---------- HEADER (bloc noir — 30%) ---------- */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
   background-color: var(--black);
@@ -60,6 +65,8 @@ nav ul {
 }
 
 nav a {
+  display: inline-block;
+  padding: 8px 0;
   font-size: 15px;
   font-weight: 500;
   color: var(--beige-line);
@@ -70,7 +77,10 @@ nav a.active {
   color: var(--gold);
 }
 
-/* ---------- HERO (page d'accueil) ---------- */
+
+/* =========================================================
+   HERO PAGE D'ACCUEIL
+   ========================================================= */
 
 .hero {
   display: grid;
@@ -94,7 +104,7 @@ nav a.active {
   font-weight: 700;
   line-height: 1.1;
   color: var(--black);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .hero-subtitle {
@@ -112,25 +122,37 @@ nav a.active {
   color: var(--white);
   background-color: var(--black);
   padding: 16px 32px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .hero-cta:hover {
   background-color: var(--gold-dark);
 }
 
-/* ---------- CADRE PHOTO (partagé) ---------- */
+
+/* =========================================================
+   CADRE PHOTO
+   ========================================================= */
+/* =========================================================
+   CADRE PHOTO (ADAPTÉ AUX DASHBOARDS & PAYSAGES)
+   ========================================================= */
 
 .photo-frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Ratio horizontal adapté aux écrans et dashboards */
   border: 1px solid var(--black);
   background-color: var(--white);
-  background-image: radial-gradient(var(--beige-line) 1px, transparent 1px);
-  background-size: 14px 14px;
+  background-image: radial-gradient(
+    var(--beige-line) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .photo-frame::after {
@@ -138,28 +160,27 @@ nav a.active {
   position: absolute;
   top: -8px;
   right: -8px;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background-color: var(--gold);
+  z-index: 2;
 }
 
 .photo-frame span {
   font-size: 14px;
   color: var(--charcoal);
   background-color: var(--beige);
-  padding: 14px 14px;
+  padding: 8px 16px;
   border: 1px solid var(--beige-line);
 }
 
 .photo-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: none;
-}
-
-.photo-frame.has-photo img {
+  object-fit: contain; /* Affiche 100% de l'image sans rien couper */
+  object-position: center;
   display: block;
+  padding: 16px; /* Espace élégant entre la capture et le cadre à points */
 }
 
 .photo-frame.has-photo span {
@@ -167,10 +188,13 @@ nav a.active {
 }
 
 .hero .photo-frame {
-  max-width: 380px;
+  max-width: 100%;
 }
 
-/* ---------- PROJETS (aperçu sur la home) ---------- */
+
+/* =========================================================
+   PROJETS
+   ========================================================= */
 
 .projects {
   padding: 120px 100px;
@@ -218,13 +242,13 @@ nav a.active {
   font-size: 16px;
   line-height: 1.6;
   color: var(--charcoal);
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .project-stack {
   font-size: 14px;
   color: var(--charcoal);
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .project-link {
@@ -242,22 +266,23 @@ nav a.active {
   border-color: var(--black);
 }
 
-/* ---------- À PROPOS ---------- */
+
+/* =========================================================
+   À PROPOS
+   ========================================================= */
 
 .about {
   padding: 120px 100px;
   border-top: 1px solid var(--beige-line);
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 48px;                         
+  gap: 48px;
   align-items: start;
 }
 
 .about .photo-frame {
   width: 100%;
-  height: 300px;
-  aspect-ratio: auto;
-  height: auto;
+  aspect-ratio: 4 / 5;
 }
 
 .about-intro {
@@ -290,7 +315,7 @@ nav a.active {
   font-weight: 500;
   color: var(--black);
   margin-top: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .about-services {
@@ -303,7 +328,7 @@ nav a.active {
   font-size: 16px;
   line-height: 1.6;
   color: var(--charcoal);
-  padding: 14px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--beige-line);
 }
 
@@ -311,7 +336,10 @@ nav a.active {
   border-bottom: 1px solid var(--beige-line);
 }
 
-/* ---------- STACK TECHNIQUE ---------- */
+
+/* =========================================================
+   STACK TECHNIQUE
+   ========================================================= */
 
 .stack {
   padding: 120px 100px;
@@ -359,7 +387,10 @@ nav a.active {
   color: var(--charcoal);
 }
 
-/* ---------- CONTACT (bloc noir — 30%) ---------- */
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact {
   background-color: var(--black);
@@ -387,7 +418,7 @@ nav a.active {
   font-size: 18px;
   line-height: 1.6;
   color: var(--beige-line);
-  max-width: 800px;
+  max-width: 640px;
   margin-bottom: 64px;
 }
 
@@ -422,7 +453,7 @@ nav a.active {
   display: block;
   font-size: 13px;
   color: var(--beige-line);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .contact-info-list a {
@@ -435,14 +466,14 @@ nav a.active {
 }
 
 .contact-form .field {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .contact-form label {
   display: block;
   font-size: 13px;
   color: var(--beige-line);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .contact-form input,
@@ -451,7 +482,7 @@ nav a.active {
   background: transparent;
   border: none;
   border-bottom: 1px solid #333029;
-  padding: 10px 0;
+  padding: 8px 0;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   color: var(--beige);
@@ -475,8 +506,8 @@ nav a.active {
   color: var(--black);
   background-color: var(--gold);
   border: none;
-  border-radius: 3px;
-  padding: 14px 32px;
+  border-radius: 4px;
+  padding: 16px 32px;
   cursor: pointer;
 }
 
@@ -484,7 +515,10 @@ nav a.active {
   background-color: var(--white);
 }
 
-/* ---------- FIL D'ARIANE (pages de détail projet) ---------- */
+
+/* =========================================================
+   FIL D'ARIANE
+   ========================================================= */
 
 .back-link {
   display: inline-block;
@@ -498,17 +532,19 @@ nav a.active {
   color: var(--gold-dark);
 }
 
-/* ---------- HERO PROJET (page de détail) ---------- */
+
+/* =========================================================
+   HERO PROJET
+   ========================================================= */
 
 .project-hero {
   padding: 32px 100px 60px;
-  max-width: 1200px;
 }
 
 .project-tags {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .project-tags span {
@@ -516,8 +552,8 @@ nav a.active {
   font-weight: 500;
   color: var(--gold-dark);
   border: 1px solid var(--beige-line);
-  padding: 5px 12px;
-  border-radius: 3px;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 .project-hero h1 {
@@ -526,26 +562,182 @@ nav a.active {
   font-weight: 700;
   line-height: 1.15;
   color: var(--black);
-  margin-bottom: 20px;
+  max-width: 820px;
+  margin-bottom: 24px;
 }
 
 .project-hero-summary {
   font-size: 18px;
   line-height: 1.6;
-  max-width: 1000px;
+  max-width: 760px;
   color: var(--charcoal);
 }
 
+
+/* =========================================================
+   IMAGE PRINCIPALE PROJET
+   ========================================================= */
+
 .project-main-photo {
-  aspect-ratio: 16 / 8;
-  margin: 0 auto 50px;
-  max-width: 1000px;
+  aspect-ratio: 15 / 7;
+  margin: 0 350px 100px;
 }
 
-/* ---------- CONTENU (page de détail projet) ---------- */
+
+/* =========================================================
+   CARROUSEL PROJET
+   ========================================================= */
+
+/* =========================================================
+   IMAGE PRINCIPALE PROJET (100% VISIBLE)
+   ========================================================= */
+
+.project-main-photo {
+  width: calc(100% - 200px);
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  
+  /* Ratio 16/10 plus adapté aux fenêtres d'applications qu'un 16/9 classique */
+  aspect-ratio: 16 / 10; 
+  
+  /* Fond et bordure légere pour un rendu propre si le ratio de l'image varie */
+  background-color: #ffffff;
+  border: 1px solid var(--beige-line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   CARROUSEL
+   ========================================================= */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Affiche l'image intégrale sans rien rogner */
+  object-fit: contain;
+  object-position: center;
+  
+  /* Marge interne pour détacher l'interface des bords du cadre */
+  padding: 16px; 
+  
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   BOUTONS CARROUSEL
+   ========================================================= */
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+
+  background-color: var(--beige);
+  color: var(--black);
+
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+.carousel-prev {
+  left: 20px;
+}
+
+.carousel-next {
+  right: 20px;
+}
+
+
+/* =========================================================
+   INDICATEURS
+   ========================================================= */
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
+
+  z-index: 5;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+
+  background-color: var(--beige);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background-color: var(--gold);
+}
+
+.carousel-dot.active {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+
+/* =========================================================
+   CONTENU PAGE PROJET
+   ========================================================= */
 
 .project-content {
-  max-width: 1200px;
   padding: 0 100px;
 }
 
@@ -557,7 +749,6 @@ nav a.active {
   font-size: 15px;
   font-weight: 500;
   color: var(--gold-dark);
-  max-width: 1000px;
   margin-bottom: 16px;
 }
 
@@ -566,14 +757,15 @@ nav a.active {
   font-size: 28px;
   font-weight: 700;
   color: var(--black);
-  margin-bottom: 20px;
-  max-width: 1000px;
+  max-width: 760px;
+  margin-bottom: 24px;
 }
 
 .content-block p {
   font-size: 17px;
   line-height: 1.7;
   color: var(--charcoal);
+  max-width: 760px;
 }
 
 .content-block p + p {
@@ -582,7 +774,8 @@ nav a.active {
 
 .content-block ul {
   list-style: disc;
-  padding-left: 20px;
+  max-width: 760px;
+  padding-left: 24px;
 }
 
 .content-block p + ul {
@@ -603,7 +796,7 @@ nav a.active {
 .project-stack-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 .project-stack-list span {
@@ -612,10 +805,13 @@ nav a.active {
   background-color: var(--white);
   border: 1px solid var(--beige-line);
   padding: 8px 16px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
-/* ---------- LIENS DE FIN DE PAGE (page de détail projet) ---------- */
+
+/* =========================================================
+   LIENS DE FIN DE PAGE
+   ========================================================= */
 
 .project-links {
   display: flex;
@@ -630,7 +826,7 @@ nav a.active {
   color: var(--white);
   background-color: var(--black);
   padding: 16px 32px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
@@ -645,7 +841,7 @@ nav a.active {
   background-color: transparent;
   border: 1px solid var(--black);
   padding: 16px 32px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .btn-secondary:hover {
@@ -653,7 +849,10 @@ nav a.active {
   color: var(--gold-dark);
 }
 
-/* ---------- FOOTER (bloc noir — 30%) ---------- */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
   background-color: var(--black);
@@ -668,6 +867,8 @@ nav a.active {
 }
 
 .footer-links a {
+  display: inline-block;
+  padding: 8px 0;
   font-size: 15px;
   font-weight: 500;
   color: var(--beige-line);
@@ -689,15 +890,20 @@ nav a.active {
   color: var(--gold);
 }
 
-/* ---------- RESPONSIVE ---------- */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 768px) {
+
+  /* ---------- Header ---------- */
 
   header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    padding: 28px 24px;
+    gap: 16px;
+    padding: 24px;
   }
 
   nav ul {
@@ -705,11 +911,12 @@ nav a.active {
     flex-wrap: wrap;
   }
 
-  /* Home */
+
+  /* ---------- Home ---------- */
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 60px 24px;
+    padding: 56px 24px;
     min-height: auto;
     gap: 40px;
   }
@@ -724,30 +931,38 @@ nav a.active {
   }
 
   .hero-subtitle {
-    font-size: 16px; 
-    line-height: 1.6;
-    color: var(--charcoal);
-    max-width: 380px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 32px;
   }
+
+
+  /* ---------- Sections ---------- */
 
   .projects,
   .stack,
   .contact {
-    padding: 60px 24px;
+    padding: 56px 24px;
   }
 
+
+  /* ---------- À propos ---------- */
+
   .about {
-    padding: 60px 24px;
+    padding: 56px 24px;
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
   .about .photo-frame {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
+    aspect-ratio: auto;
     order: -1;
   }
+
+
+  /* ---------- Titres ---------- */
 
   .projects-title,
   .about-title,
@@ -756,26 +971,38 @@ nav a.active {
     font-size: 28px;
   }
 
+
+  /* ---------- Projets ---------- */
+
   .project-item {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 16px;
   }
 
   .project-link {
     justify-self: start;
   }
 
+
+  /* ---------- Stack ---------- */
+
   .stack-row {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
+
+  /* ---------- Contact ---------- */
 
   .contact-body {
     grid-template-columns: 1fr;
     gap: 56px;
   }
 
-  /* Page de détail projet */
+
+  /* =====================================================
+     PAGE DÉTAIL PROJET
+     ===================================================== */
 
   .back-link {
     padding: 32px 24px 0;
@@ -783,7 +1010,6 @@ nav a.active {
 
   .project-hero {
     padding: 24px 24px 40px;
-    max-width: 1000px
   }
 
   .project-hero h1 {
@@ -791,7 +1017,12 @@ nav a.active {
   }
 
   .project-main-photo {
-    margin: 0 24px 60px;
+    /*
+     * Cadre moins large sur mobile,
+     * tout en conservant le ratio du carousel.
+     */
+    margin: 0 24px 56px;
+    aspect-ratio: 16 / 9;
   }
 
   .project-content {
@@ -807,7 +1038,29 @@ nav a.active {
     flex-direction: column;
   }
 
-  /* Footer */
+
+  /* ---------- Carrousel mobile ---------- */
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .carousel-prev {
+    left: 12px;
+  }
+
+  .carousel-next {
+    right: 12px;
+  }
+
+  .carousel-dots {
+    bottom: 12px;
+  }
+
+
+  /* ---------- Footer ---------- */
 
   .footer {
     padding: 40px 24px;
@@ -815,14 +1068,13 @@ nav a.active {
 
   .footer-links {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
   }
 
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
   }
-
-  
 }
+
