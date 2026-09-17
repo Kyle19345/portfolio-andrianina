@@ -737,6 +737,90 @@ nav a.active {
    CONTENU PAGE PROJET
    ========================================================= */
 
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 80px;
+  max-width: 1650px;
+  
+  /* Annule le centrage automatique pour coller à gauche */
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 100px;
+  
+  /* Retrait identique à la section .project-hero */
+  padding-left: 0px; /* Vérifiez que .project-hero a aussi 100px de padding-left */
+  padding-right: 100px;
+}
+
+.project-content {
+  padding: 0; /* Réinitialise le padding global car géré par le layout */
+}
+
+/* Sidebar collante au défilement */
+.project-sidebar {
+  position: sticky;
+  top: 40px;
+  align-self: start;
+  border-left: 1px solid var(--beige-line);
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-value {
+  font-size: 15px;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sidebar-tags span {
+  font-size: 13px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--beige-line);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* Ajustement responsive (Mobile / Tablette) */
+@media (max-width: 992px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  .project-sidebar {
+    position: static;
+    border-left: none;
+    border-top: 1px solid var(--beige-line);
+    padding-left: 0;
+    padding-top: 32px;
+  }
+}
+
 .project-content {
   padding: 0 100px;
 }

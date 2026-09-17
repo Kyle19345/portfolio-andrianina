@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suivi de prix e-commerce — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scraper YouTube — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
       <span>Desktop Application</span>
       <span>API</span>
     </div>
-    <h1>Application permettant de récupérer les coordonnées de chaînes YouTube </h1>
+    <h1>Application permettant de récupérer les coordonnées de chaînes YouTube</h1>
     <p class="project-hero-summary">
       La recherche manuelle de créateurs YouTube correspondant à une thématique donnée 
       peut être longue lorsqu'il faut identifier les chaînes pertinentes, 
@@ -40,66 +40,65 @@
     </p>
   </section>
 
-  <!-- Remplacer par <img src="assets/projet-1-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
   <div class="photo-frame project-main-photo has-photo">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="assets/project3-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
+        <img src="assets/project3-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+      </div>
 
-  <div class="carousel">
+      <button class="carousel-btn carousel-prev" aria-label="Image précédente">
+        ←
+      </button>
 
-    <div class="carousel-track">
-      <img src="assets/project3-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
-      <img src="assets/project3-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+      <button class="carousel-btn carousel-next" aria-label="Image suivante">
+        →
+      </button>
+
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="Image 1"></button>
+        <button class="carousel-dot" aria-label="Image 2"></button>
+        <button class="carousel-dot" aria-label="Image 3"></button>
+        <button class="carousel-dot" aria-label="Image 4"></button>
+      </div>
     </div>
-
-    <button class="carousel-btn carousel-prev" aria-label="Image précédente">
-      ←
-    </button>
-
-    <button class="carousel-btn carousel-next" aria-label="Image suivante">
-      →
-    </button>
-
-    <div class="carousel-dots">
-      <button class="carousel-dot active" aria-label="Image 1"></button>
-      <button class="carousel-dot" aria-label="Image 2"></button>
-      <button class="carousel-dot" aria-label="Image 3"></button>
-      <button class="carousel-dot" aria-label="Image 4"></button>
-    </div>
-
-    </div>
-
   </div>
 
-  <div class="project-content">
+  <!-- Structure à 2 colonnes (Main + Sidebar) -->
+  <div class="project-layout">
 
-    <div class="content-block">
-      <p class="content-label">Le contexte</p>
-      <h2>Identifier automatiquement des créateurs correspondant à une recherche</h2>
-      <p>
-        La recherche de chaînes YouTube peut nécessiter de parcourir 
-        de nombreuses chaînes avant de trouver celles qui correspondent 
-        réellement à une thématique ou à une zone géographique donnée. 
-        La récupération manuelle des informations et la recherche de coordonnées 
-        de contact rendent également le processus répétitif.
-        Dans ce projet, l'objectif était de développer une application permettant d'automatiser 
-        cette collecte à partir de critères définis par l'utilisateur : mot-clé, langue et pays.
-      </p>
-      <p>
-      L'objectif : Automatiser la recherche de chaînes YouTube 
-      et l'identification des coordonnées 
-      de contact disponibles publiquement dans leurs descriptions, 
-      puis centraliser les informations dans un format exploitable..
-    </p>
-    </div>
+    <!-- Colonne principale (Texte de présentation) -->
+    <main class="project-content">
 
-    <div class="content-block">
-      <p class="content-label">L'approche</p>
-      <h2>Une collecte via API suivie d'une extraction et d'une structuration des données</h2>
-      <p>
-        J'ai développé une application desktop permettant d'interagir 
-        avec YouTube Data API v3 afin de rechercher les chaînes correspondant 
-        aux critères définis par l'utilisateur.
-    </p>
-      <p>Le développement s'est concentré sur l'automatisation de la collecte et la structuration des informations récupérées :</p>
+      <div class="content-block">
+        <p class="content-label">Le contexte</p>
+        <h2>Identifier automatiquement des créateurs correspondant à une recherche</h2>
+        <p>
+          La recherche de chaînes YouTube peut nécessiter de parcourir 
+          de nombreuses chaînes avant de trouver celles qui correspondent 
+          réellement à une thématique ou à une zone géographique donnée. 
+          La récupération manuelle des informations et la recherche de coordonnées 
+          de contact rendent également le processus répétitif.
+          Dans ce projet, l'objectif était de développer une application permettant d'automatiser 
+          cette collecte à partir de critères définis par l'utilisateur : mot-clé, langue et pays.
+        </p>
+        <p>
+          L'objectif : Automatiser la recherche de chaînes YouTube 
+          et l'identification des coordonnées 
+          de contact disponibles publiquement dans leurs descriptions, 
+          puis centraliser les informations dans un format exploitable.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">L'approche</p>
+        <h2>Une collecte via API suivie d'une extraction et d'une structuration des données</h2>
+        <p>
+          J'ai développé une application desktop permettant d'interagir 
+          avec YouTube Data API v3 afin de rechercher les chaînes correspondant 
+          aux critères définis par l'utilisateur.
+        </p>
+        <p>Le développement s'est concentré sur l'automatisation de la collecte et la structuration des informations récupérées :</p>
         <ul>
           <li>Recherche des chaînes YouTube à partir de mots-clés.</li>
           <li>Filtrage des résultats selon la langue et le pays.</li>
@@ -109,32 +108,52 @@
           <li>Sauvegarde locale des paramètres de l'application.</li>
           <li>Exécution des traitements en arrière-plan afin de maintenir une interface réactive.</li>
           <li>Gestion des erreurs liées aux requêtes API et au quota d'utilisation.</li>
-      </ul>
-    </div>
-    <div class="content-block">
-      <p class="content-label">Le résultat</p>
-      <h2>Une application de collecte automatisée et une base de contacts structurée</h2>
-      <p>
-        L'application permet désormais de transformer une recherche manuelle en un processus automatisé. 
-        Les chaînes correspondant aux critères définis sont collectées 
-        et leurs informations sont regroupées dans une structure commune.
-        Les résultats peuvent ensuite être exportés sous forme 
-        de CSV afin d'être réutilisés pour l'analyse, la qualification 
-        ou d'autres processus de traitement de données.
-      </p>
-    </div>
-
-    <div class="content-block">
-      <p class="content-label">Stack technique</p>
-      <div class="project-stack-list">
-        <span>Python</span>
-        <span>Customtkinter</span>
-        <span>Pandas</span>
-        <span>Youtube Data API v3</span>
-        <span>Requests</span>
-        <span>CSV</span>
+        </ul>
       </div>
-    </div>
+
+      <div class="content-block">
+        <p class="content-label">Le résultat</p>
+        <h2>Une application de collecte automatisée et une base de contacts structurée</h2>
+        <p>
+          L'application permet désormais de transformer une recherche manuelle en un processus automatisé. 
+          Les chaînes correspondant aux critères définis sont collectées 
+          et leurs informations sont regroupées dans une structure commune.
+          Les résultats peuvent ensuite être exportés sous forme 
+          de CSV afin d'être réutilisés pour l'analyse, la qualification 
+          ou d'autres processus de traitement de données.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Barre latérale d'informations -->
+    <aside class="project-sidebar">
+      <div class="sidebar-block">
+        <span class="sidebar-label">Rôle</span>
+        <p class="sidebar-value">Développeur Python / Automation</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Type de projet</span>
+        <p class="sidebar-value">Application Desktop (GUI)</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Stack technique</span>
+        <div class="sidebar-tags">
+          <span>Python</span>
+          <span>CustomTkinter</span>
+          <span>YouTube API v3</span>
+          <span>Pandas</span>
+          <span>Requests</span>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Livrables</span>
+        <p class="sidebar-value">Logiciel Desktop, Exportateur CSV, Gestionnaire de requêtes API</p>
+      </div>
+    </aside>
 
   </div>
 
@@ -149,28 +168,22 @@
       <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Prénom Nom</p>
+      <p>© 2026 Andrianina RAMANANDRAIBE</p>
       <a href="#top">Retour en haut</a>
     </div>
   </footer>
 
-    <script>
+  <script>
     const images = document.querySelectorAll('.carousel-image');
     const dots = document.querySelectorAll('.carousel-dot');
-
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
 
     let currentIndex = 0;
 
     function showImage(index) {
-      images.forEach((image) => {
-        image.classList.remove('active');
-      });
-
-      dots.forEach((dot) => {
-        dot.classList.remove('active');
-      });
+      images.forEach((image) => image.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
 
       images[index].classList.add('active');
       dots[index].classList.add('active');
@@ -179,22 +192,12 @@
     }
 
     function nextImage() {
-      let nextIndex = currentIndex + 1;
-
-      if (nextIndex >= images.length) {
-        nextIndex = 0;
-      }
-
+      let nextIndex = (currentIndex + 1) % images.length;
       showImage(nextIndex);
     }
 
     function previousImage() {
-      let previousIndex = currentIndex - 1;
-
-      if (previousIndex < 0) {
-        previousIndex = images.length - 1;
-      }
-
+      let previousIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(previousIndex);
     }
 
@@ -202,12 +205,9 @@
     prevButton.addEventListener('click', previousImage);
 
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        showImage(index);
-      });
+      dot.addEventListener('click', () => showImage(index));
     });
 
-    // Changement automatique toutes les 5 secondes
     setInterval(nextImage, 5000);
   </script>
 
