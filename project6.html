@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de données immobilière sous Supabase — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="logo">Andrianina RAMANANDRAIBE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="projects.html" class="back-link">← Tous les projets</a>
+
+  <section class="project-hero">
+    <div class="project-tags">
+      <span>Base de données</span>
+      <span>Immobilier</span>
+    </div>
+    <h1>Conception d'une base de données immobilière sous Supabase</h1>
+    <p class="project-hero-summary">
+      Modèle de données relationnel conçu pour centraliser la gestion des
+      biens, propriétaires, offres, demandes clients et transactions d'une
+      activité immobilière.
+    </p>
+  </section>
+
+  <!-- Remplacer par <img src="assets/projet-6-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
+  
+  <div class="project-layout">
+
+    <main class="project-content">
+
+      <div class="content-block">
+        <p class="content-label">Le contexte</p>
+        <h2>Structurer une activité immobilière multi-acteurs</h2>
+        <p>
+          L'entreprise Alia avait besoin d'une base de données capable de
+          centraliser toutes les données métier de son activité immobilière :
+          biens, propriétaires, offres commerciales, demandes clients et
+          transactions. L'objectif était d'assurer une traçabilité complète
+          d'un bien depuis sa création jusqu'à sa transaction finale, une
+          gestion unifiée des personnes physiques et morales, et des relations
+          flexibles entre biens, offres, demandes et agences — le tout pensé
+          pour servir de base à un futur CRM, back-office ou portail web.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">L'approche</p>
+        <h2>Un modèle structuré par domaine, historisé et flexible</h2>
+        <p>
+          Les entités ont été regroupées par domaine métier : géographie
+          (secteurs, fokontany), entités (personnes physiques et morales,
+          contacts), biens immobiliers, offres, demandes et transactions.
+          Des colonnes de type enum imposent des valeurs contrôlées (statut
+          d'un bien, type de transaction, statut d'une offre, etc.) pour
+          limiter les erreurs de saisie et faciliter le filtrage et le
+          reporting.
+        </p>
+        <p>
+          Plusieurs tables disposent de champs <code>created_at</code> et
+          <code>archived_at</code> afin de conserver l'historique sans
+          supprimer physiquement les données, utile pour les audits et le
+          suivi métier. Les relations complexes (un bien avec plusieurs
+          propriétaires, une offre gérée par plusieurs agences) sont gérées
+          par des tables de liaison enrichies, comme <code>property_ownerships</code>
+          qui porte la part de propriété et le type de possession, plutôt que
+          par de simples tables de jointure.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Le résultat</p>
+        <h2>Un schéma relationnel documenté, prêt à l'exploitation</h2>
+        <p>
+          Le modèle livré couvre l'ensemble du flux métier : un fokontany est
+          défini, un bien y est rattaché, ses propriétaires sont enregistrés,
+          le bien est transformé en offre commerciale, les agences associées
+          sont renseignées, les demandes clients sont suivies et une
+          transaction peut être créée lorsque l'opération est finalisée. Une
+          documentation fonctionnelle complète accompagne le schéma pour en
+          faciliter l'appropriation et l'évolution.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Stack technique</p>
+        <div class="project-stack-list">
+          <span>Supabase</span>
+          <span>PostgreSQL</span>
+          <span>SQL</span>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="project-sidebar">
+      <div class="sidebar-block">
+        <span class="sidebar-label">Rôle</span>
+        <p class="sidebar-value">Concepteur de base de données</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Type de projet</span>
+        <p class="sidebar-value">Modélisation de base de données relationnelle</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Stack technique</span>
+        <div class="sidebar-tags">
+          <span>Supabase</span>
+          <span>PostgreSQL</span>
+          <span>SQL</span>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Livrables</span>
+        <p class="sidebar-value">Schéma de base de données, documentation fonctionnelle, référentiels d'énumérations</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="project-links">
+    <a href="index.html#contact" class="btn-secondary">Un besoin similaire ?</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:contact@exemple.com">Email</a>
+      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Andrianina RAMANANDRAIBE</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </footer>
+
+</body>
+</html>

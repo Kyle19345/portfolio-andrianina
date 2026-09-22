@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatisation de tâches Asana via Zapier — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="logo">Andrianina RAMANANDRAIBE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="projects.html" class="back-link">← Tous les projets</a>
+
+  <section class="project-hero">
+    <div class="project-tags">
+      <span>Automatisation</span>
+      <span>No-code</span>
+    </div>
+    <h1>Création intelligente de tâches Asana via Zapier</h1>
+    <p class="project-hero-summary">
+      Automatisation complète du traitement des réclamations d'un lotissement
+      pour une entreprise de gestion immobilière : un formulaire remplace les
+      appels téléphoniques et génère automatiquement la bonne tâche Asana,
+      assignée au bon gestionnaire.
+    </p>
+  </section>
+
+  <!-- Remplacer par <img src="assets/projet-4-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
+  <div class="photo-frame project-main-photo has-photo">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="assets/project4-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
+        <img src="assets/project4-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+        <img src="assets/project4-img3.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+      </div>
+
+      <button class="carousel-btn carousel-prev" aria-label="Image précédente">
+        ←
+      </button>
+
+      <button class="carousel-btn carousel-next" aria-label="Image suivante">
+        →
+      </button>
+
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="Image 1"></button>
+        <button class="carousel-dot" aria-label="Image 2"></button>
+        <button class="carousel-dot" aria-label="Image 3"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-layout">
+
+    <main class="project-content">
+
+      <div class="content-block">
+        <p class="content-label">Le contexte</p>
+        <h2>Un traitement manuel par téléphone, lent et source d'erreurs</h2>
+        <p>
+          L'entreprise, spécialisée dans la gestion immobilière, traite les
+          réclamations des habitants d'un lotissement. Le processus reposait
+          entièrement sur le téléphone : le client appelait le support pour
+          exposer son problème, et un agent consignait manuellement la demande
+          sous forme de tâche dans Asana.
+        </p>
+        <p>
+          Ce fonctionnement dépendait de la disponibilité du support, ralentissait
+          la prise en charge des réclamations et laissait place à des erreurs de
+          saisie ou d'assignation au mauvais gestionnaire.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">L'approche</p>
+        <h2>Un formulaire connecté à Asana via Zapier</h2>
+        <p>
+          Le client renseigne désormais un formulaire simple : son lotissement,
+          son nom, son prénom et la description de son problème. Ces informations
+          sont automatiquement transmises à Zapier.
+        </p>
+        <p>
+          Zapier effectue une correspondance dans un tableau Google Sheets qui
+          recense, pour chaque lot, le gestionnaire responsable, son adresse
+          e-mail et l'adresse du bâtiment concerné. Une tâche Asana est ensuite
+          créée avec les informations du client et assignée automatiquement au
+          bon gestionnaire. Si aucun lotissement ne correspond, la tâche est
+          assignée par défaut à une personne dédiée, pour qu'aucune demande ne
+          reste sans réponse.
+        </p>
+        <p>
+          Le système surveille également les mises à jour des tâches dans Asana :
+          dès qu'une tâche est modifiée, les informations associées sont
+          automatiquement synchronisées.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Le résultat</p>
+        <h2>Un traitement des réclamations entièrement automatisé</h2>
+        <p>
+          Les réclamations sont désormais créées et assignées instantanément,
+          sans intervention manuelle du support. Le suivi est centralisé dans
+          Asana et reste à jour automatiquement, ce qui réduit le temps de
+          traitement et le risque d'erreur d'assignation.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Stack technique</p>
+        <div class="project-stack-list">
+          <span>Zapier</span>
+          <span>Google Forms</span>
+          <span>Google Sheets</span>
+          <span>Asana</span>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="project-sidebar">
+      <div class="sidebar-block">
+        <span class="sidebar-label">Rôle</span>
+        <p class="sidebar-value">Développeur automatisation no-code</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Type de projet</span>
+        <p class="sidebar-value">Automatisation no-code (formulaire → Asana)</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Stack technique</span>
+        <div class="sidebar-tags">
+          <span>Zapier</span>
+          <span>Google Sheets</span>
+          <span>Asana</span>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Livrables</span>
+        <p class="sidebar-value">Workflow Zapier, formulaire de collecte, synchronisation automatique des mises à jour Asana</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="project-links">
+    <a href="index.html#contact" class="btn-secondary">Un besoin similaire ?</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:contact@exemple.com">Email</a>
+      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Andrianina RAMANANDRAIBE</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </footer>
+  <script>
+    const images = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((image) => image.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+    }
+
+    function nextImage() {
+      let nextIndex = (currentIndex + 1) % images.length;
+      showImage(nextIndex);
+    }
+
+    function previousImage() {
+      let previousIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(previousIndex);
+    }
+
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', previousImage);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showImage(index));
+    });
+
+    // Changement automatique toutes les 5 secondes
+    setInterval(nextImage, 5000);
+  </script>
+</body>
+</html>

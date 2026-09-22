@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraction de catalogue e-commerce pour Shopify — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="logo">Andrianina RAMANANDRAIBE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="projects.html" class="back-link">← Tous les projets</a>
+
+  <section class="project-hero">
+    <div class="project-tags">
+      <span>Web scraping</span>
+      <span>E-commerce</span>
+    </div>
+    <h1>Extraction de catalogue e-commerce pour import Shopify</h1>
+    <p class="project-hero-summary">
+      Collecte d'environ 500 produits sur un site e-commerce afin de préparer
+      un fichier propre et conforme, prêt à être importé sur Shopify ou
+      WooCommerce.
+    </p>
+  </section>
+
+  <!-- Remplacer par <img src="assets/projet-5-large.jpg" alt="..."> et ajouter la classe "has-photo" -->
+  <div class="photo-frame project-main-photo has-photo">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="assets/project5-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
+        <img src="assets/project5-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+      </div>
+
+      <button class="carousel-btn carousel-prev" aria-label="Image précédente">
+        ←
+      </button>
+
+      <button class="carousel-btn carousel-next" aria-label="Image suivante">
+        →
+      </button>
+
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="Image 1"></button>
+        <button class="carousel-dot" aria-label="Image 2"></button>
+        <button class="carousel-dot" aria-label="Image 3"></button>
+        <button class="carousel-dot" aria-label="Image 4"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-layout">
+
+    <main class="project-content">
+
+      <div class="content-block">
+        <p class="content-label">Le contexte</p>
+        <h2>Migrer un catalogue produit sans ressaisie manuelle</h2>
+        <p>
+          Le client souhaitait transférer environ 500 produits déjà présents
+          sur un site e-commerce vers une nouvelle boutique Shopify ou
+          WooCommerce. Ressaisir manuellement chaque fiche produit (titre,
+          prix, images, variantes) aurait représenté un travail long et
+          répétitif, avec un risque élevé d'erreurs et d'incohérences.
+        </p>
+        <p>
+          L'objectif était d'obtenir un fichier produit propre et conforme,
+          exploitable pour un import direct, sans intervention manuelle sur
+          chaque fiche.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">L'approche</p>
+        <h2>Une extraction structurée, page par page</h2>
+        <p>
+          J'ai commencé par analyser le site source pour repérer les pages
+          produits et les pages catégories, puis défini les champs à extraire :
+          titre, prix, disponibilité, URL, image, description et variantes
+          lorsqu'elles existent.
+        </p>
+        <p>
+          L'extraction a été réalisée avec Requests et BeautifulSoup, avec une
+          gestion de la pagination pour couvrir l'ensemble du catalogue sans
+          rien omettre. Les données brutes ont ensuite été nettoyées et
+          normalisées avec Pandas : suppression des doublons, gestion des
+          valeurs manquantes et normalisation du format des prix, avant mise en
+          forme pour un export CSV compatible avec le format d'import Shopify.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Le résultat</p>
+        <h2>Un dataset produit prêt à l'import</h2>
+        <p>
+          Le client dispose désormais d'un fichier produit complet et propre,
+          directement importable sur Shopify ou WooCommerce, sans ressaisie
+          manuelle ni vérification fastidieuse fiche par fiche.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <p class="content-label">Stack technique</p>
+        <div class="project-stack-list">
+          <span>Python</span>
+          <span>Requests</span>
+          <span>BeautifulSoup</span>
+          <span>Pandas</span>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="project-sidebar">
+      <div class="sidebar-block">
+        <span class="sidebar-label">Rôle</span>
+        <p class="sidebar-value">Développeur Python / Web scraping</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Type de projet</span>
+        <p class="sidebar-value">Script d'extraction et d'export de données</p>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Stack technique</span>
+        <div class="sidebar-tags">
+          <span>Python</span>
+          <span>Requests</span>
+          <span>BeautifulSoup</span>
+          <span>Pandas</span>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <span class="sidebar-label">Livrables</span>
+        <p class="sidebar-value">Script d'extraction, fichier CSV compatible Shopify / WooCommerce</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="project-links">
+    <a href="index.html#contact" class="btn-secondary">Un besoin similaire ?</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:contact@exemple.com">Email</a>
+      <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/votre-profil" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Andrianina RAMANANDRAIBE</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((image) => image.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+    }
+
+    function nextImage() {
+      let nextIndex = (currentIndex + 1) % images.length;
+      showImage(nextIndex);
+    }
+
+    function previousImage() {
+      let previousIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(previousIndex);
+    }
+
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', previousImage);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showImage(index));
+    });
+
+    // Changement automatique toutes les 5 secondes
+    setInterval(nextImage, 5000);
+  </script>
+  
+</body>
+</html>

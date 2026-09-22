@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scraper YouTube — Portfolio</title>
+  <title>Collecte de données de sites e-commerce — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -28,23 +28,20 @@
   <section class="project-hero">
     <div class="project-tags">
       <span>Web scraping</span>
-      <span>Desktop Application</span>
-      <span>API</span>
+      <span>E-commerce</span>
     </div>
-    <h1>Application permettant de récupérer les coordonnées de chaînes YouTube</h1>
+    <h1>Extraction de données produits e-commerce</h1>
     <p class="project-hero-summary">
-      La recherche manuelle de créateurs YouTube correspondant à une thématique donnée 
-      peut être longue lorsqu'il faut identifier les chaînes pertinentes, 
-      consulter leurs informations et rechercher leurs coordonnées 
-      de contact dans leurs descriptions.
+      Extraction et structuration de plus de 2 000 données produits depuis Fnac et Cdiscount 
+      afin de constituer un dataset exploitable pour l’analyse et la comparaison.
     </p>
   </section>
 
   <div class="photo-frame project-main-photo has-photo">
     <div class="carousel">
       <div class="carousel-track">
-        <img src="assets/project3-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
-        <img src="assets/project3-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
+        <img src="assets/project1-img1.jpg" alt="Capture d'écran du projet 1" class="carousel-image active">
+        <img src="assets/project1-img2.jpg" alt="Capture d'écran du projet 2" class="carousel-image">
       </div>
 
       <button class="carousel-btn carousel-prev" aria-label="Image précédente">
@@ -58,8 +55,6 @@
       <div class="carousel-dots">
         <button class="carousel-dot active" aria-label="Image 1"></button>
         <button class="carousel-dot" aria-label="Image 2"></button>
-        <button class="carousel-dot" aria-label="Image 3"></button>
-        <button class="carousel-dot" aria-label="Image 4"></button>
       </div>
     </div>
   </div>
@@ -72,57 +67,60 @@
 
       <div class="content-block">
         <p class="content-label">Le contexte</p>
-        <h2>Identifier automatiquement des créateurs correspondant à une recherche</h2>
+        <h2>Automatiser la collecte de données produits</h2>
         <p>
-          La recherche de chaînes YouTube peut nécessiter de parcourir 
-          de nombreuses chaînes avant de trouver celles qui correspondent 
-          réellement à une thématique ou à une zone géographique donnée. 
-          La récupération manuelle des informations et la recherche de coordonnées 
-          de contact rendent également le processus répétitif.
-          Dans ce projet, l'objectif était de développer une application permettant d'automatiser 
-          cette collecte à partir de critères définis par l'utilisateur : mot-clé, langue et pays.
+          L’objectif de ce projet était d’automatiser la collecte de plus de 2 000 produits depuis Fnac et Cdiscount, en récupérant notamment leur titre, leur prix et leur URL.
+          Chaque plateforme possède sa propre structure HTML, son propre fonctionnement et ses propres contraintes techniques. La collecte automatisée nécessitait donc d’adapter la méthode d’extraction à chaque site afin d’obtenir des données fiables et homogènes.
         </p>
         <p>
-          L'objectif : Automatiser la recherche de chaînes YouTube 
-          et l'identification des coordonnées 
-          de contact disponibles publiquement dans leurs descriptions, 
-          puis centraliser les informations dans un format exploitable.
+          L'objectif : Automatiser la collecte et obtenir des données directement exploitables
+          et de construire un système capable d’extraire n'importe quel quantité de donnée et de les structurer afin de produire un dataset unique, prêt à être analysé ou réutilisé.
         </p>
       </div>
 
       <div class="content-block">
         <p class="content-label">L'approche</p>
-        <h2>Une collecte via API suivie d'une extraction et d'une structuration des données</h2>
+        <h2>Une extraction adaptée à chaque plateforme</h2>
         <p>
-          J'ai développé une application desktop permettant d'interagir 
-          avec YouTube Data API v3 afin de rechercher les chaînes correspondant 
-          aux critères définis par l'utilisateur.
+          La première étape a consisté à analyser chaque site afin de comprendre son fonctionnement : structure des pages, organisation des données, chargement du contenu et mécanismes de protection contre les robots.
+          J’ai ensuite identifié les différentes informations à extraire — prix, titre, description, images et autres attributs produits — puis déterminé, pour chaque donnée, les sélecteurs HTML les plus fiables afin de limiter les erreurs liées à la structure des pages.
         </p>
-        <p>Le développement s'est concentré sur l'automatisation de la collecte et la structuration des informations récupérées :</p>
+        <br>
+        </br>
+        <h2>Développement du robot de collecte</h2>
+        <p>
+          Une fois l’analyse terminée, j’ai développé le robot en Python avec Playwright. Ce choix permet de reproduire un véritable navigateur et de récupérer des données chargées dynamiquement, notamment lorsque celles-ci ne sont pas directement présentes dans le HTML initial de la page.
+          <br>
+            Pour gérer les contraintes liées à la collecte sur les deux plateformes, le système utilise également des proxies résidentiels afin de répartir les requêtes et limiter les blocages liés à une adresse IP unique.
+          </br>
+            L’objectif n’était cependant pas de multiplier les changements d’IP de manière systématique. Le robot a été conçu pour adopter un comportement plus proche d'une navigation humaine : temps de pause entre certaines requêtes, rythme de collecte contrôlé et gestion des erreurs et des pages indisponibles.
+        </p>
+        <br>
+        </br>
+        <h2>Nettoyage et structuration des données</h2>
+        <p>
+          Après l'extraction, une seconde phase permet de transformer les données brutes en un dataset propre et homogène.
+        </p>
+        <p>Les données sont notamment traitées pour :</p>
         <ul>
-          <li>Recherche des chaînes YouTube à partir de mots-clés.</li>
-          <li>Filtrage des résultats selon la langue et le pays.</li>
-          <li>Récupération des informations des chaînes via l'API YouTube Data v3.</li>
-          <li>Analyse des descriptions afin d'identifier les adresses email disponibles.</li>
-          <li>Nettoyage et structuration des données collectées.</li>
-          <li>Sauvegarde locale des paramètres de l'application.</li>
-          <li>Exécution des traitements en arrière-plan afin de maintenir une interface réactive.</li>
-          <li>Gestion des erreurs liées aux requêtes API et au quota d'utilisation.</li>
+          <li>supprimer les doublons ;</li>
+          <li>gérer les cellules ou informations manquantes ;</li>
+          <li>normaliser les types et formats de données ;</li>
+          <li>nettoyer les valeurs extraites ;</li>
+          <li>créer de nouveaux champs à partir des données existantes.</li>
         </ul>
+
       </div>
 
       <div class="content-block">
         <p class="content-label">Le résultat</p>
-        <h2>Une application de collecte automatisée et une base de contacts structurée</h2>
+        <h2>Plus de 2 000 produits collectés et structurési</h2>
         <p>
-          L'application permet désormais de transformer une recherche manuelle en un processus automatisé. 
-          Les chaînes correspondant aux critères définis sont collectées 
-          et leurs informations sont regroupées dans une structure commune.
-          Les résultats peuvent ensuite être exportés sous forme 
-          de CSV afin d'être réutilisés pour l'analyse, la qualification 
-          ou d'autres processus de traitement de données.
+          Le système permet d’automatiser la collecte de plus de 2 000 produits provenant de Fnac et Cdiscount, puis de regrouper les informations dans un dataset structuré.
+          Les données collectées sont nettoyées, normalisées et enrichies afin d’être directement exploitables pour des analyses, des comparaisons de produits ou d’autres traitements automatisés.
+          Le résultat est un processus de collecte reproductible, capable de gérer les spécificités techniques de plusieurs plateformes tout en produisant des données homogènes et prêtes à l’emploi.
         </p>
-      </div>
+    </div>
 
     </main>
 
@@ -130,20 +128,19 @@
     <aside class="project-sidebar">
       <div class="sidebar-block">
         <span class="sidebar-label">Rôle</span>
-        <p class="sidebar-value">Développeur Python / Automation</p>
+        <p class="sidebar-value">Développeur Python</p>
       </div>
 
       <div class="sidebar-block">
         <span class="sidebar-label">Type de projet</span>
-        <p class="sidebar-value">Application Desktop (GUI)</p>
+        <p class="sidebar-value">Werb scraping</p>
       </div>
 
       <div class="sidebar-block">
         <span class="sidebar-label">Stack technique</span>
         <div class="sidebar-tags">
           <span>Python</span>
-          <span>CustomTkinter</span>
-          <span>YouTube API v3</span>
+          <span>Playwright</span>
           <span>Pandas</span>
           <span>Requests</span>
         </div>
@@ -151,7 +148,7 @@
 
       <div class="sidebar-block">
         <span class="sidebar-label">Livrables</span>
-        <p class="sidebar-value">Logiciel Desktop, Exportateur CSV, Gestionnaire de requêtes API</p>
+        <p class="sidebar-value">Données structurées, nettoyées</p>
       </div>
     </aside>
 
@@ -208,7 +205,7 @@
       dot.addEventListener('click', () => showImage(index));
     });
 
-    setInterval(nextImage, 5000);
+    setInterval(nextImage, 10000);
   </script>
 
 </body>
