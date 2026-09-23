@@ -12,6 +12,9 @@
   --gold-dark: #8A5F1E;
 
   --white: #FBF9F5;
+
+  /* lignes discrètes sur fond sombre (header, footer, contact, à propos) */
+  --dark-line: #2E2A24;
 }
 
 * {
@@ -131,6 +134,7 @@ nav a.active::after {
 .hero-intro,
 .projects-intro,
 .about-intro,
+.services-intro,
 .stack-intro,
 .contact-intro {
   display: flex;
@@ -141,6 +145,7 @@ nav a.active::after {
 .hero-intro::before,
 .projects-intro::before,
 .about-intro::before,
+.services-intro::before,
 .stack-intro::before,
 .contact-intro::before {
   content: "";
@@ -178,6 +183,22 @@ nav a.active::after {
   letter-spacing: -0.01em;
   color: var(--black);
   margin-bottom: 26px;
+}
+
+.hero-name {
+  position: relative;
+  display: inline-block;
+  color: var(--gold-dark);
+}
+
+.hero-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--gold);
 }
 
 .hero-subtitle {
@@ -276,7 +297,7 @@ nav a.active::after {
    ========================================================= */
 
 .projects {
-  padding: 140px 100px;
+  padding: 80px 100px 100px;
   border-top: 1px solid var(--beige-line);
 }
 
@@ -371,25 +392,96 @@ nav a.active::after {
    ========================================================= */
 
 .about {
-  padding: 140px 100px;
-  border-top: 1px solid var(--beige-line);
+  background-color: var(--black);
+  padding: 110px 100px;
+}
+
+.about-inner {
+  max-width: 1240px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 64px;
+  grid-template-columns: 380px 1fr;
+  gap: 72px;
   align-items: start;
 }
 
-.about .photo-frame {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  position: sticky;
-  top: 40px;
+
+/* ---- Colonne visuelle : photo + chiffres clés ---- */
+
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
+
+.about-visual .photo-frame {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border-color: var(--gold-dark);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.about-visual .photo-frame img {
+  padding: 0;
+  object-fit: cover;
+}
+
+.photo-frame-circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-image: none;
+}
+
+.photo-frame-circle::after {
+  border-radius: 50%;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border: 1px solid var(--dark-line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  padding: 20px 8px;
+  border-left: 1px solid var(--dark-line);
+}
+
+.about-stat:first-child {
+  border-left: none;
+}
+
+.about-stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.about-stat-label {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--beige-line);
+}
+
+
+/* ---- Colonne texte ---- */
 
 .about-intro {
   font-size: 16px;
   font-weight: 500;
-  color: var(--gold-dark);
+  color: var(--gold);
   margin-bottom: 18px;
 }
 
@@ -397,51 +489,147 @@ nav a.active::after {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--white);
   max-width: 700px;
   line-height: 1.25;
   letter-spacing: -0.005em;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .about-text {
   font-size: 18px;
   line-height: 1.7;
-  color: var(--charcoal);
-  max-width: 660px;
+  color: var(--beige-line);
+  max-width: 620px;
   margin-bottom: 18px;
 }
 
 .about-services-label {
   font-size: 15px;
   font-weight: 500;
-  color: var(--black);
+  color: var(--white);
   margin-top: 28px;
   margin-bottom: 16px;
 }
 
-.about-services {
-  list-style: none;
-  max-width: 660px;
-  margin-bottom: 0;
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services {
+  padding: 100px 100px 90px;
+  border-top: 1px solid var(--beige-line);
 }
 
-.about-services li {
+.services-intro {
   font-size: 16px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+
+.services-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  max-width: 600px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin-bottom: 64px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: var(--beige-line);
+  border: 1px solid var(--beige-line);
+}
+
+.service-card {
+  background-color: var(--beige);
+  padding: 36px 32px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  background-color: var(--white);
+  box-shadow: inset 3px 0 0 var(--gold);
+}
+
+.service-card-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+  color: var(--gold-dark);
+}
+
+.service-card-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+.service-card-text {
+  font-size: 15px;
   line-height: 1.6;
   color: var(--charcoal);
-  padding: 18px 0;
-  border-top: 1px solid var(--beige-line);
-  transition: padding-left 0.2s ease, color 0.2s ease;
 }
 
-.about-services li:last-child {
-  border-bottom: 1px solid var(--beige-line);
+
+/* ---- Service mis en avant : agents IA ---- */
+
+.service-card-featured {
+  margin-top: 24px;
+  background-color: var(--black);
+  border-radius: 4px;
+  padding: 40px 44px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
-.about-services li:hover {
-  padding-left: 12px;
-  color: var(--black);
+.service-card-featured .service-card-icon {
+  margin-bottom: 0;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.service-card-featured-text {
+  flex: 1 1 320px;
+}
+
+.service-card-featured .service-card-title {
+  color: var(--white);
+}
+
+.service-card-featured .service-card-text {
+  color: var(--beige-line);
+}
+
+.service-card-cta {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card-cta:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 
@@ -450,7 +638,7 @@ nav a.active::after {
    ========================================================= */
 
 .stack {
-  padding: 140px 100px;
+  padding: 80px 100px 80px;
   border-top: 1px solid var(--beige-line);
 }
 
@@ -1088,6 +1276,7 @@ nav a.active::after {
   }
 
   .projects,
+  .services,
   .stack,
   .contact {
     padding: 64px 24px;
@@ -1095,20 +1284,30 @@ nav a.active::after {
 
   .about {
     padding: 64px 24px;
-    grid-template-columns: 1fr;
-    gap: 32px;
   }
 
-  .about .photo-frame {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-visual .photo-frame {
     width: 160px;
-    height: 160px;
-    aspect-ratio: auto;
-    order: -1;
-    position: static;
+    max-width: 160px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-featured {
+    align-items: flex-start;
+    padding: 32px 24px;
   }
 
   .projects-title,
   .about-title,
+  .services-title,
   .stack-title,
   .contact-title {
     font-size: 28px;
