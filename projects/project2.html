@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aggrégateur f'offres immobilières — Portfolio</title>
+  <title>Aggrégateur d'offres immobilières — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -31,10 +31,10 @@
       <span>Immobilier</span>
       <span>Data processing</span>
     </div>
-    <h1>Agrégateur et analyse d'offres immobilières</h1>
+    <h1>Agrégation et analyse d'offres immobilières</h1>
     <p class="project-hero-summary">
-      Centralisation et normalisation d'annonces immobilières provenant de plusieurs sites 
-      à Madagascar afin de créer une base de données homogène et exploitable.
+      Centralisation, nettoyage et normalisation d'annonces immobilières provenant de plusieurs plateformes à Madagascar 
+      afin de constituer une base de données homogène, comparable et exploitable pour l'analyse du marché immobilier.
     </p>
   </section>
 
@@ -74,18 +74,17 @@
         <p class="content-label">Le contexte</p>
         <h2>Des données immobilières dispersées et difficiles à comparer</h2>
         <p>
-          Les annonces immobilières sont réparties sur plusieurs plateformes, 
-          avec des formats et des informations qui varient d'un site à l'autre.
-          Dans ce projet, l'objectif était de collecter des annonces de terrains depuis 
-          plusieurs sites immobiliers à Madagascar tels que OFIM, ImmoConseil et GUY HOQUET MADAGASCAR , puis de les regrouper 
-          dans une structure commune.
-          La principale difficulté ne résidait pas dans l'extraction elle-même, 
-          mais dans l'hétérogénéité des données : prix présents 
-          dans le titre ou la description, devises différentes,
-          superficies exprimées de manière variable et informations parfois incomplètes.
+          Les annonces immobilières sont réparties sur plusieurs plateformes, avec des formats et des informations qui varient d'un site à l'autre.
+          Dans ce projet, l'objectif était de collecter des annonces de terrains provenant de plusieurs sites immobiliers à Madagascar, 
+          notamment OFIM, ImmoConseil et GUY HOQUET MADAGASCAR, puis de les regrouper dans une structure commune.
         </p>
         <p>
-          L'objectif : Transformer des annonces hétérogènes en données comparables, 
+          La principale difficulté ne résidait pas dans l'extraction elle-même, 
+          mais dans l'hétérogénéité des données : prix présents dans le titre ou la description,
+          devises différentes, superficies exprimées de manière variable et informations parfois incomplètes.
+        </p>
+        <p>
+          L'objectif: Transformer des annonces hétérogènes en données comparables, 
           centraliser les annonces et normaliser les informations clés, notamment le prix, la superficie et la localisation.
           Le but était d'obtenir un dataset suffisamment propre et cohérent 
           pour permettre ensuite l'analyse et la comparaison des différentes offres.
@@ -101,7 +100,7 @@
           Une stratégie d'extraction adaptée à chaque site a ensuite été mise en place 
           avec Requests et BeautifulSoup.
         </p>
-        <p>Une attention particulière a été portée au traitement des données :</p>
+        <p>Une attention particulière a été portée au traitement et à la normalisation des données :</p>
         <ul>
           <li>Extraction des informations pertinentes depuis chaque annonce.</li>
           <li>Recherche et récupération du prix lorsqu'il était présent dans différents champs (titre, description).</li>
@@ -118,9 +117,12 @@
         <h2>Une base immobilière transformée en outil d'analyse</h2>
         <p>
           Les annonces provenant de plusieurs plateformes ont été centralisées, 
-          nettoyées et normalisées afin de constituer une base de données homogène.
+          nettoyées et normalisées afin de constituer une base de données homogène et exploitable.
+        </p>
+        <p>
           Cette base a ensuite servi à réaliser une analyse comparative du marché immobilier à partir des prix,
           superficies et localisations collectés.
+        </p>
         </p>
         <p>L'analyse a notamment permis de :</p>
         <ul>
