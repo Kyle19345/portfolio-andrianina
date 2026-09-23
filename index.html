@@ -284,7 +284,7 @@
 
       <div class="contact-form-wrapper">
         <p class="contact-form-label">Envoyer un message</p>
-        <form class="contact-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <form class="contact-form" id="contact-form" action="https://hook.eu1.make.com/sp8oimn38s3gdvn7bfouembjxuja549e" method="POST" novalidate>
 
           <div class="field">
             <label for="name">Nom</label>
@@ -302,6 +302,7 @@
           </div>
 
           <button type="submit">Envoyer le message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
 
@@ -319,6 +320,42 @@
       <a href="#top">Retour en haut</a>
     </div>
   </footer>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var status = document.getElementById('form-status');
+      var button = form.querySelector('button[type="submit"]');
+      var defaultLabel = button.textContent;
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        status.textContent = '';
+        status.classList.remove('form-status--success', 'form-status--error');
+        button.disabled = true;
+        button.textContent = 'Envoi en cours…';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+          .then(function (response) {
+            if (!response.ok) throw new Error('Réponse invalide');
+            form.reset();
+            status.textContent = 'Message envoyé, merci ! Je vous réponds sous 48h.';
+            status.classList.add('form-status--success');
+          })
+          .catch(function () {
+            status.textContent = "L'envoi a échoué. Réessayez, ou écrivez-moi directement à andrianinakanto5@gmail.com.";
+            status.classList.add('form-status--error');
+          })
+          .finally(function () {
+            button.disabled = false;
+            button.textContent = defaultLabel;
+          });
+      });
+    })();
+  </script>
 
 </body>
 </html>

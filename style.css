@@ -829,6 +829,26 @@ nav a.active::after {
   transform: translateY(0);
 }
 
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.form-status {
+  font-size: 14px;
+  margin-top: 20px;
+  min-height: 18px;
+}
+
+.form-status--success {
+  color: var(--gold);
+}
+
+.form-status--error {
+  color: #C97A5B;
+}
+
 
 /* =========================================================
    FIL D'ARIANE
