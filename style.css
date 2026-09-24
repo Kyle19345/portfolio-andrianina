@@ -1,16 +1,19 @@
 :root {
+  /* 60% — fond dominant */
   --beige: #F1EBDF;
   --beige-line: #D9CCAE;
 
-
+  /* 30% — structure / texte fort */
   --black: #161513;
   --charcoal: #5C564A;
 
+  /* 10% — accent */
   --gold: #B8862E;
   --gold-dark: #8A5F1E;
 
   --white: #FBF9F5;
 
+  /* lignes discrètes sur fond sombre (header, footer, contact, à propos) */
   --dark-line: #2E2A24;
 }
 
@@ -63,7 +66,9 @@ textarea:focus-visible {
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
   background-color: var(--black);
@@ -121,8 +126,10 @@ nav a.active::after {
 }
 
 
-/* LABEL "EYEBROW" — repère visuel partagé par toutes les
-  sections (hero, projets, à propos, stack, contact) */
+/* =========================================================
+   LABEL "EYEBROW" — repère visuel partagé par toutes les
+   sections (hero, projets, à propos, stack, contact)
+   ========================================================= */
 
 .hero-intro,
 .projects-intro,
@@ -149,7 +156,9 @@ nav a.active::after {
 }
 
 
-/* HERO PAGE D'ACCUEIL */
+/* =========================================================
+   HERO PAGE D'ACCUEIL
+   ========================================================= */
 
 .hero {
   display: grid;
@@ -223,7 +232,9 @@ nav a.active::after {
 }
 
 
-/* CADRE PHOTO */
+/* =========================================================
+   CADRE PHOTO
+   ========================================================= */
 
 .photo-frame {
   position: relative;
@@ -281,7 +292,9 @@ nav a.active::after {
 }
 
 
-/* PROJETS */
+/* =========================================================
+   PROJETS
+   ========================================================= */
 
 .projects {
   padding: 80px 100px 100px;
@@ -374,7 +387,9 @@ nav a.active::after {
 }
 
 
-/* PAGE "TOUS LES PROJETS" */
+/* =========================================================
+   PAGE "TOUS LES PROJETS"
+   ========================================================= */
 
 .page-hero {
   padding: 72px 100px 56px;
@@ -409,7 +424,9 @@ nav a.active::after {
 }
 
 
-/* À PROPOS */
+/* =========================================================
+   À PROPOS
+   ========================================================= */
 
 .about {
   background-color: var(--black);
@@ -426,7 +443,7 @@ nav a.active::after {
 }
 
 
-/* Colonne visuelle : photo + chiffres clés */
+/* ---- Colonne visuelle : photo + chiffres clés ---- */
 
 .about-visual {
   display: flex;
@@ -496,7 +513,7 @@ nav a.active::after {
 }
 
 
-/* Colonne texte */
+/* ---- Colonne texte ---- */
 
 .about-intro {
   font-size: 16px;
@@ -532,7 +549,9 @@ nav a.active::after {
   margin-bottom: 16px;
 }
 
-/* SERVICES */
+/* =========================================================
+   SERVICES
+   ========================================================= */
 
 .services {
   padding: 100px 100px 90px;
@@ -604,7 +623,7 @@ nav a.active::after {
 }
 
 
-/* Service mis en avant : agents IA*/
+/* ---- Service mis en avant : agents IA ---- */
 
 .service-card-featured {
   margin-top: 24px;
@@ -651,7 +670,9 @@ nav a.active::after {
 }
 
 
-/* STACK TECHNIQUE */
+/* =========================================================
+   STACK TECHNIQUE
+   ========================================================= */
 
 .stack {
   padding: 80px 100px 80px;
@@ -709,7 +730,9 @@ nav a.active::after {
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact {
   background-color: var(--black);
@@ -864,7 +887,9 @@ nav a.active::after {
 }
 
 
-/* FIL D'ARIANE */
+/* =========================================================
+   FIL D'ARIANE
+   ========================================================= */
 
 .back-link {
   display: inline-block;
@@ -880,7 +905,9 @@ nav a.active::after {
 }
 
 
-/* HERO PROJET */
+/* =========================================================
+   HERO PROJET
+   ========================================================= */
 
 .project-hero {
   padding: 32px 100px 64px;
@@ -920,7 +947,9 @@ nav a.active::after {
 }
 
 
-/* IMAGE PRINCIPALE PROJET (100% VISIBLE) */
+/* =========================================================
+   IMAGE PRINCIPALE PROJET (100% VISIBLE)
+   ========================================================= */
 
 .project-main-photo {
   width: calc(100% - 200px);
@@ -935,7 +964,9 @@ nav a.active::after {
 }
 
 
-/* CARROUSEL */
+/* =========================================================
+   CARROUSEL
+   ========================================================= */
 
 .carousel {
   position: relative;
@@ -1026,7 +1057,9 @@ nav a.active::after {
 }
 
 
-/* CONTENU PAGE PROJET — LAYOUT 2 COLONNES */
+/* =========================================================
+   CONTENU PAGE PROJET — LAYOUT 2 COLONNES
+   ========================================================= */
 
 .project-layout {
   display: grid;
@@ -1173,7 +1206,9 @@ nav a.active::after {
 }
 
 
-/* LIENS DE FIN DE PAGE */
+/* =========================================================
+   LIENS DE FIN DE PAGE
+   ========================================================= */
 
 .project-links {
   display: flex;
@@ -1216,7 +1251,9 @@ nav a.active::after {
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
   background-color: var(--black);
@@ -1256,7 +1293,9 @@ nav a.active::after {
 }
 
 
-/*  RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 768px) {
 
